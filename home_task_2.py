@@ -7,8 +7,8 @@ def palindrome_detector(string: str):
     for char in string.strip().lower().replace(" ", ""):
         q.append(char)
 
-    if not len(q):
-        return "String is empty!"
+    if not len(q) or len(q) == 1:
+        return "String is empty or contains only one character!"
 
     while len(q) > 1:
         if q.popleft() != q.pop():
